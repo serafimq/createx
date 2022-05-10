@@ -106,3 +106,83 @@ a {
 .page--ios .dis-scroll {
   position: relative;
 }
+
+.main-title {
+  margin: 0 0 25px 0;
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 130%;
+  letter-spacing: 1px;
+  color: var(--color-ebony);
+  text-transform: uppercase;
+
+  span {
+    color: var(--color-primary);
+  }
+
+  &--home {
+    color: var(--color-light);
+  }
+}
+
+.main-descr {
+  margin: 0;
+  font-size: 20px;
+  line-height: 150%;
+  color: var(--color-storm);
+
+  &--home {
+    margin-bottom: 60px;
+    color: var(--color-light);
+  }
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-light);
+  border-radius: 4px;
+  padding: 15px 39px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  &--fill {
+    background-color: var(--color-primary);
+  }
+
+  &--stroke {
+    &-light {
+      border-color: var(--color-light);
+    }
+  }
+}
+
+.title {
+  margin: 0 0 25px 0;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  color: var(--color-ebony);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.descr {
+  margin: 0 0 60px 0;
+  font-size: 18px;
+  line-height: 150%;
+  color: var(--color-storm);
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.section-offset {
+  padding-top: 120px;
+}
