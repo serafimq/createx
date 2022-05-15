@@ -25,7 +25,7 @@
         top: 0;
         width: 1px;
         height: 100%;
-        background-image: url('../../img/divider.svg');
+        background-image: url('../img/divider.svg');
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -33,13 +33,13 @@
     }
 
     &--quality {
-      background-image: url('../../img/quality.svg');
+      background-image: url('../img/quality.svg');
     }
     &--safety {
-      background-image: url('../../img/safety.svg');
+      background-image: url('../img/safety.svg');
     }
     &--comfort {
-      background-image: url('../../img/somfort.svg');
+      background-image: url('../img/somfort.svg');
     }
 
     &__subtitle {

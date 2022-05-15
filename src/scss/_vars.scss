@@ -1,5 +1,3 @@
-// если вы хотите использовать sass-переменные - удалите root
-// colors
 :root {
   // base
   --font-family: "Ubuntu", sans-serif;
@@ -13,4 +11,7 @@
   --color-storm: #787A80;
   --color-ebony: #1E212C;
   --color-primary: #FF5A30;
+
+  // sizes
+  --grid-gap: 30px;
 }

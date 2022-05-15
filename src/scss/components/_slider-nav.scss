@@ -1,0 +1,35 @@
+.slider-nav {
+  @include flex-v-center;
+
+  position: relative;
+  z-index: 15;
+
+  &__btn {
+    @include flex-all-center;
+
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    color: var(--color-gray);
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      object-fit: cover;
+      color: inherit;
+      fill: currentColor;
+    }
+
+    &:hover {
+      color: var(--color-light);
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.slider-nav__btn.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
