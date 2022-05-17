@@ -49,3 +49,15 @@ prevBtn.addEventListener('click', () => {
     nextNextActiveSlide.classList.remove('slider-visible');
   }
 })
+
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: gap,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
+});
+
