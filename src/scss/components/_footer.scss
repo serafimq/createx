@@ -85,6 +85,7 @@
     margin: 0;
     width: 364px;
   }
+
   .form-field__input {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -123,6 +124,7 @@
     &:not(:last-child) {
       margin-bottom: 4px;
     }
+
     a {
       color: inherit;
     }
@@ -146,7 +148,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom:4px;
+      margin-bottom: 4px;
     }
   }
 
