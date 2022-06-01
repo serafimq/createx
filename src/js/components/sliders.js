@@ -4,6 +4,10 @@ const portSlider = document.querySelector('.portfolio-section__items');
 const nextBtn = document.querySelector('.portfolio-section__next');
 const prevBtn = document.querySelector('.portfolio-section__prev');
 
+const relatedSlider = document.querySelector('.related-project__items');
+const nextBtnRelatedSlider = document.querySelector('.related-project__next');
+const prevBtnRelatedSlider = document.querySelector('.related-project__prev');
+
 if (portSlider) {
   const portfolioSlider = new Swiper('.portfolio-section__items', {
     slidesPerView: 3,
@@ -40,6 +44,54 @@ if (portSlider) {
   })
 
   prevBtn.addEventListener('click', () => {
+    const activeSlide = portSlider.querySelector('.swiper-slide-next');
+    if (activeSlide.previousElementSibling) {
+      const prevActiveSlide = activeSlide.previousElementSibling;
+      const nextActiveSlide = activeSlide.nextElementSibling;
+      const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
+
+      prevActiveSlide.classList.add('slider-visible');
+      nextNextActiveSlide.classList.remove('slider-visible');
+    }
+  })
+}
+
+if (relatedSlider) {
+  const portfolioSlider = new Swiper('.related-project__items', {
+    slidesPerView: 3,
+    spaceBetween: gap,
+    navigation: {
+      nextEl: '.related-project__next',
+      prevEl: '.related-project__prev',
+    },
+    on: {
+      init: function () {
+        const activeSlide = portSlider.querySelector('.swiper-slide-active');
+        const nextActiveSlide = activeSlide.nextElementSibling;
+        const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
+
+        activeSlide.classList.add('slider-visible');
+        nextActiveSlide.classList.add('slider-visible');
+        nextNextActiveSlide.classList.add('slider-visible');
+      },
+    },
+  });
+
+  nextBtnRelatedSlider.addEventListener('click', () => {
+    const activeSlide = portSlider.querySelector('.swiper-slide-active');
+    const nextActiveSlide = activeSlide.nextElementSibling;
+    const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
+
+    document.querySelectorAll('.portfolio-section__items .swiper-slide').forEach(el => {
+      el.classList.remove('slider-visible');
+    })
+
+    activeSlide.classList.add('slider-visible');
+    nextActiveSlide.classList.add('slider-visible');
+    nextNextActiveSlide.classList.add('slider-visible');
+  })
+
+  prevBtnRelatedSlider.addEventListener('click', () => {
     const activeSlide = portSlider.querySelector('.swiper-slide-next');
     if (activeSlide.previousElementSibling) {
       const prevActiveSlide = activeSlide.previousElementSibling;
