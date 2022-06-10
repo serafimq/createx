@@ -1,0 +1,123 @@
+.achieve {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: var(--color-light);
+  background-image: url('../img/achieve.png');
+  background-position: right bottom -350px;
+  background-repeat: no-repeat;
+
+  &__item {
+    @include flex-column-center;
+
+    grid-column: span 3;
+    padding-top: 70px;
+    background-size: 48px;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    &--recom {
+      background-image: url('../img/like.svg');
+    }
+    &--renov {
+      background-image: url('../img/paint.svg');
+    }
+    &--spec {
+      background-image: url('../img/helmet-2.svg');
+    }
+    &--finish {
+      background-image: url('../img/pant.svg');
+    }
+  }
+
+  &__value {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--color-primary);
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-ebony);
+  }
+
+  &__list {
+    margin-bottom: 260px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    top: -130px;
+    left: -30px;
+    flex-shrink: 0;
+    position: relative;
+    padding: 80px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    z-index: 10;
+    box-shadow: var(--main-shadow);
+    width: 735px;
+    border-radius: 4px;
+    background-color: var(--color-light);
+  }
+}
+
+.quote {
+  margin: 0;
+  &__content {
+    margin-bottom: 32px;
+    position: relative;
+    padding: 9px 53px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -5px;
+      top: 8px;
+      width: 28px;
+      height: 20px;
+      background-image: url('../img/braces.svg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 20px 53px;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--color-storm);
+    background-image: url('../img/sign.svg');
+    background-size: 100px 68px;
+    background-position: right 65px center;
+    background-repeat: no-repeat;
+  }
+
+  &__author {
+    margin-bottom: 2px;
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+  }
+}
