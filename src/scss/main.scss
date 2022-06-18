@@ -48,6 +48,8 @@
 @import "./components/categories";
 
 @import "./components/post";
+@import "./components/post-comments";
+@import "./components/post-form";
 
 // подключения компонентов страницы (малые)
 @import "./components/nav";
@@ -58,4 +60,5 @@
 @import "./components/breadcrumbs";
 @import "./components/portfolio-item";
 @import "./components/news-article";
+@import "./components/comment";
 
