@@ -1,0 +1,125 @@
+.post {
+  &__cover {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    margin-top: -79px;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 830px;
+  }
+
+  &__share {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--color-ebony);
+
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  &__content {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    * {
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h2 {
+      margin: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+    }
+    h3 {
+      margin: 0;
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--color-ebony);
+    }
+    p {
+      margin: 0;
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 160%;
+      color: var(--color-gray);
+    }
+
+    blockquete {
+      margin: 0;
+      margin-bottom: 28px;
+      padding: 21px 58px;
+      padding-right: 5px;
+      position: relative;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--color-ebony);
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 21px;
+        width: 28px;
+        height: 20px;
+        background-image: url('../img/braces.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    ul {
+      margin: 0;
+      margin-bottom: 30px;
+      padding: 0;
+      list-style-type: none;
+      font-size: 16px;
+      line-height: 160%;
+
+      li {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 4px;
+          width: 16px;
+          height: 16px;
+          background-image: url('../img/red-check.svg');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 3px;
+          font-size: 16px;
+          line-height: 160%;
+          color: var(--color-gray);
+        }
+      }
+    }
+  }
+}
