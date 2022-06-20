@@ -1,0 +1,14 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &__image {
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
