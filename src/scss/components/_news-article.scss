@@ -4,6 +4,7 @@
   background-color: var(--color-light);
   border-radius: 4px;
   box-shadow: var(--main-shadow);
+  transition: color 0.3s ease-in-out;
 
   &__title {
     margin: 0;
@@ -19,6 +20,20 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-ebony);
+
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 
   &--small {
@@ -78,5 +93,20 @@
       background-size: 16px 16px;
       background-repeat: no-repeat;
     }
+  }
+}
+
+a.article-meta {
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-active);
   }
 }

@@ -56,6 +56,11 @@
     transition: opacity 0.3s ease-in-out;
   }
 
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+
   &__content {
     @include flex-column-center;
 

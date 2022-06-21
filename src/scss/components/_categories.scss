@@ -39,8 +39,21 @@
     font-size: 16px;
     color: #9a9ca5;
     border: 1px solid transparent;
-    transition: color 0.3s ease-in-out;
     border-radius: 4px;
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
 
     &--active {
       border: 1px solid currentColor;
@@ -72,6 +85,19 @@
       width: 24px;
       object-fit: cover;
       fill: currentColor;
+    }
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
     &--active {
       color: var(--color-primary);

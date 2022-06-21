@@ -77,6 +77,19 @@
     font-size: 14px;
     text-kashida-space: 0.5px;
     padding: 11px 30px;
+    transition: color 0.3s ease-in-out;
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+
+    &:hover {
+      color: var(--color-active);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
   }
 }
 
@@ -105,6 +118,19 @@
       margin-right: 22px;
       padding-left: 44px;
       padding-right: 44px;
+      transition: color 0.3s ease-in-out;
+      &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--color-primary);
+      }
+
+      &:hover {
+        color: var(--color-active);
+      }
+
+      &:active {
+        color: var(--color-active);
+      }
     }
     &--send {
       padding-right: 54px;

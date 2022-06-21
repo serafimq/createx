@@ -75,6 +75,11 @@
     width: 100%;
   }
 
+  is-focused {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+  }
+
   .choices__list--single .choices__placeholder {
     opacity: 1;
     font-size: 16px;

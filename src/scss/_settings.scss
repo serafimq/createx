@@ -166,8 +166,21 @@ a {
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
   &--fill {
     background-color: var(--color-primary);
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      background-color: var(--color-active);
+    }
+    &:active {
+      background-color: var(--color-active);
+    }
   }
 
   &--stroke {
@@ -178,6 +191,19 @@ a {
     &-primary {
       border-color: var(--color-primary);
       color: var(--color-primary);
+    }
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--color-primary);
+    }
+    &:hover {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+    &:active {
+      border-color: var(--color-primary);
+      background-color: var(--color-active);
     }
   }
 }

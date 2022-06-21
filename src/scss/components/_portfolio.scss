@@ -98,4 +98,30 @@
     color: inherit;
     fill: currentColor;
   }
+
+  transition: color 0.3s ease-in-out;
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  &:active {
+    color: var(--color-active);
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+  }
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--color-ebony);
+    }
+  }
 }
