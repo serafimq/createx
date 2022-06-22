@@ -7,6 +7,10 @@
   background-color: var(--color-light);
   transition: transform 0.3s ease-in-out;
 
+  &__image {
+    min-height: 345px;
+  }
+
   &__content {
     @include flex-column-center;
     padding: 16px 10px 23px;
@@ -29,7 +33,7 @@
   }
 
   &__btn {
-    display: none;
+    margin-bottom: -68px;
     margin-top: 24px;
     padding: 13px 31px;
     font-weight: 700;
@@ -39,6 +43,8 @@
     color: var(--color-primary);
     border: 1px solid currentColor;
     border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    will-change: margin;
   }
 
 
@@ -47,7 +53,10 @@
     outline: 2px solid var(--color-primary);
   }
   &:hover {
-    transform: translateY(-3px);
+    .portfolio-item__btn {
+      // display: inline-block;
+      margin-bottom: 0;
+    }
   }
   &:active {
     border-color: var(--color-primary);
