@@ -10,6 +10,18 @@
     grid-template-columns: repeat(6, 1fr);
     column-gap: 102px;
     row-gap: 40px;
+
+    @include minidesk {
+      column-gap: 30px;
+    }
+  }
+
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: span 3;
+    }
   }
 
   &__link {

@@ -12,6 +12,18 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--mission-gap) * 2);
+
+    @include tablet {
+      --mission-gap: 30px;
+    }
+
+    @include minitablet {
+      --mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -34,6 +46,10 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @include minitablet {
+          display: none;
+        }
       }
     }
 
@@ -63,6 +79,13 @@
     line-height: 160%;
     color: var(--color-storm);
   }
+
+  @include mobile {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
   &__centered {
     margin-bottom: -13px;
   }
@@ -70,5 +93,9 @@
   &__btn {
     transform: translateY(13px);
     width: 390px;
+
+    @include mobile {
+      width: 286px;
+    }
   }
 }

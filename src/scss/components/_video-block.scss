@@ -66,4 +66,7 @@
     }
   }
 
+  @include mobile {
+    height: 300px;
+  }
 }

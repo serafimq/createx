@@ -6,6 +6,11 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 23px;
+
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__field {
@@ -15,6 +20,14 @@
     &--big {
       width: 100%;
     }
+
+    @include mobile {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
   }
 
   &__bottom {
@@ -22,6 +35,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 39px;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__custom-checkbox {
@@ -38,6 +56,10 @@
       &::after {
         top: 4px;
       }
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -124,6 +146,10 @@
   }
   .choices__list--dropdown {
     background-color: var(--color-athens);
+  }
+
+  @include tablet {
+    width: 100%;
   }
 }
 

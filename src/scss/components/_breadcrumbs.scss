@@ -38,4 +38,8 @@
       color: #9a9ca5;
     }
   }
+
+  @include minidesk {
+    flex-wrap: wrap;
+  }
 }

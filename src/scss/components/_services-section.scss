@@ -9,11 +9,27 @@
   &__list {
     margin-bottom: 80px;
   }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .services-list {
   &__item {
     grid-column: span 3;
+
+    @include tablet {
+      grid-column: span 6;
+    }
+
+    @include mobile {
+      grid-column: span 4;
+    }
+  }
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -85,6 +101,10 @@
     color: var(--color-ebony);
     text-align: center;
     transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &--construct {

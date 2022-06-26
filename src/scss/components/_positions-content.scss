@@ -1,6 +1,7 @@
 .positions-content {
   padding-top: 120px;
   margin-bottom: 56px;
+
   &__left {
     grid-column: span 7;
   }
@@ -35,6 +36,7 @@
     line-height: 150%;
     color: var(--color-storm);
   }
+
   &__city {
     padding-left: 23px;
     margin-right: 21px;
@@ -55,12 +57,20 @@
       transform: translateY(-50%);
     }
   }
+
   &__time {
     padding-left: 23px;
     background-image: url('../img/time.svg');
     background-position: left center;
     background-size: 16px 16px;
     background-repeat: no-repeat;
+  }
+
+  &__left {
+
+    @include tablet {
+      margin-bottom: 20px;
+    }
   }
 
   &__title {
@@ -78,6 +88,7 @@
     text-kashida-space: 0.5px;
     padding: 11px 30px;
     transition: color 0.3s ease-in-out;
+
     &:focus {
       outline-offset: 2px;
       outline: 2px solid var(--color-primary);
@@ -90,6 +101,11 @@
     &:active {
       color: var(--color-active);
     }
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -113,12 +129,26 @@
     color: var(--color-gray);
   }
 
+  &__btns {
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+
+      .positions-looking__btn--subs {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
   &__btn {
     &--subs {
       margin-right: 22px;
       padding-left: 44px;
       padding-right: 44px;
       transition: color 0.3s ease-in-out;
+
       &:focus {
         outline-offset: 2px;
         outline: 2px solid var(--color-primary);
@@ -132,6 +162,7 @@
         color: var(--color-active);
       }
     }
+
     &--send {
       padding-right: 54px;
       padding-left: 54px;

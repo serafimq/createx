@@ -5,16 +5,30 @@
 
   &__left {
     grid-column: span 7;
+
+    @include mobile {
+      grid-column: span 4;
+    }
   }
 
   &__logo {
     margin-right: 60px;
+
+    @include mobile {
+      display: inline-block;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__top {
     @include flex-v-center;
 
     margin-bottom: 22px;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__descr {
@@ -27,6 +41,15 @@
 
   &__form {
     grid-column: span 5;
+
+    @include minitablet {
+      grid-column: span 12;
+    }
+
+    @include mobile {
+      grid-column: span 4;
+      padding-right: 10px;
+    }
   }
 
   &__address {
@@ -35,6 +58,10 @@
 
   &__nav {
     grid-column: span 8;
+
+    @include mobile {
+      grid-column: span 4;
+    }
   }
 
   &__copyright {
@@ -50,6 +77,10 @@
       background-position: 2px center;
       background-repeat: no-repeat;
       background-size: 16px 16px;
+    }
+
+    @include mobile {
+      grid-column: span 4;
     }
   }
 }
@@ -151,6 +182,13 @@
   &__col {
     &:not(:last-child) {
       margin-right: 125px;
+
+      @include minitablet {
+        margin-right: 65px;
+      }
+      @include mobile {
+        margin-right: 35px;
+      }
     }
   }
 
@@ -178,4 +216,14 @@
       color: var(--color-light);
     }
   }
+
+  @include minitablet {
+    padding-left: 24px;
+  }
+  @include mobile {
+    padding-left: 0;
+
+  }
 }
+
+

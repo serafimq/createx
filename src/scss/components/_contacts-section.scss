@@ -54,4 +54,8 @@
   &__custom-checkbox {
     margin-bottom: 22px;
   }
+
+  @include mobile {
+    padding: 15px;
+  }
 }

@@ -1,5 +1,4 @@
 .hero {
-
   &__content {
     max-width: 590px;
   }
@@ -11,6 +10,10 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include middledesk {
+      display: none;
+    }
   }
 
   &__prev {
@@ -20,6 +23,12 @@
     z-index: 10;
     background-color: var(--color-light);
     transform: translateY(-50%);
+
+    @include middledesk {
+      display: none;
+    }
+
+
   }
   &__pag {
     display: flex;
@@ -49,6 +58,25 @@
       &::after {
         display: none;
       }
+
+      @include minitablet {
+        width: 25%;
+      }
+    }
+
+    @include middledesk {
+      left: 3% !important;
+    }
+    @include minidesk {
+      left: 15px !important;
+    }
+    @include minitablet {
+      bottom: 50px !important;
+      width: calc(100% - 30px) !important;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -77,6 +105,11 @@
     .btn {
       &:not(:last-child) {
         margin-right: 20px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -111,5 +144,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include minitablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @include mobile {
+    padding: 100px 0;
+  }
 }
 

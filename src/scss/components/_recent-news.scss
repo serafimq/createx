@@ -10,13 +10,33 @@
   &__list {
     grid-template-rows: repeat(2, 255px);
     margin-bottom: 80px;
+
+    @include tablet {
+      grid-template-rows: initial;
+    }
   }
 
   &__item {
-    grid-column: 5 span;
-    &:first-child{
-      grid-column: 7 span;
-      grid-row: 2 span;
+    grid-column: span 5;
+
+    &:first-child {
+      grid-column: span 7;
+      grid-row: span 2;
+
+      @include tablet {
+        grid-column: span 12;
+        grid-row: auto;
+      }
+      @include mobile {
+        grid-column: span 4;
+      }
+    }
+
+    @include tablet {
+      grid-column: span 12;
+    }
+    @include mobile {
+      grid-column: span 4;
     }
   }
 }

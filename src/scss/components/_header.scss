@@ -6,6 +6,33 @@
 
   &__nav {
     margin-left: -112px;
+
+    @include minidesk {
+      margin-left: 0;
+    }
+
+    @include tablet {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80%;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: var(--color-light);
+      z-index: 500;
+      display: block;
+      padding: 50px;
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+
+    @include mobile {
+      padding: 30px;
+    }
   }
 
   &--main {
@@ -23,5 +50,13 @@
   &:focus {
     outline-offset: 2px;
     outline: 2px solid var(--color-primary);
+  }
+
+  @include minidesk {
+   max-width: 100px;
+  }
+
+  @include tablet {
+    max-width: none;
   }
 }

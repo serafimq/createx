@@ -27,6 +27,9 @@
     &--finish {
       background-image: url('../img/pant.svg');
     }
+    @include tablet {
+      grid-column: span 6;
+    }
   }
 
   &__value {
@@ -35,6 +38,11 @@
     font-size: 46px;
     line-height: 130%;
     color: var(--color-primary);
+
+    @include minidesk {
+      font-size: 36px;
+      line-height: 48px;
+    }
   }
 
   &__text {
@@ -46,11 +54,28 @@
 
   &__list {
     margin-bottom: 260px;
+
+    @include minitablet {
+      margin-bottom: 60px;
+    }
   }
 
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__image {
+    @include minidesk {
+      max-width: 45%;
+    }
+    @include tablet {
+      max-width: 100%;
+    }
   }
 
   &__info {
@@ -66,6 +91,19 @@
     width: 735px;
     border-radius: 4px;
     background-color: var(--color-light);
+
+    @include minidesk {
+      width: 55%;
+      left: 0;
+      top: 0;
+    }
+    @include minitablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 15px;
+    }
   }
 }
 
@@ -87,6 +125,11 @@
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+
+      @include mobile {
+        left: 0;
+      }
     }
     p {
       margin: 0;
@@ -99,6 +142,12 @@
         margin-bottom: 30px;
       }
     }
+
+    @include mobile {
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
   }
 
   &__footer {
@@ -110,6 +159,12 @@
     background-size: 100px 68px;
     background-position: right 65px center;
     background-repeat: no-repeat;
+
+
+    @include mobile {
+      padding-bottom: 120px;
+      background-position: bottom 30px center;
+    }
   }
 
   &__author {

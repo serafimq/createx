@@ -10,11 +10,19 @@ const prevBtnRelatedSlider = document.querySelector('.related-project__prev');
 
 if (portSlider) {
   const portfolioSlider = new Swiper('.portfolio-section__items', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     navigation: {
       nextEl: '.portfolio-section__next',
       prevEl: '.portfolio-section__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3
+      },
     },
     on: {
       init: function () {
@@ -58,15 +66,23 @@ if (portSlider) {
 
 if (relatedSlider) {
   const portfolioSlider = new Swiper('.related-project__items', {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: gap,
     navigation: {
       nextEl: '.related-project__next',
       prevEl: '.related-project__prev',
     },
+    breakpoints: {
+    576: {
+      slidesPerView: 2
+    },
+    768: {
+      slidesPerView: 3
+    },
+  },
     on: {
       init: function () {
-        const activeSlide = portSlider.querySelector('.swiper-slide-active');
+        const activeSlide = relatedSlider.querySelector('.swiper-slide-active');
         const nextActiveSlide = activeSlide.nextElementSibling;
         const nextNextActiveSlide = nextActiveSlide.nextElementSibling;
 

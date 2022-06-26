@@ -20,6 +20,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--color-ebony);
+
+    @include mobile {
+      font-size: 40px;
+      line-height: 54px;
+    }
   }
 
   &__descr {
@@ -28,11 +33,21 @@
     font-size: 20px;
     line-height: 150%;
     color: var(--color-storm);
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__meta {
@@ -62,6 +77,10 @@
     }
     .article-meta__item--comments {
       background-size: 20px 20px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
@@ -105,6 +124,23 @@
       text-transform: initial;
       letter-spacing: 1px;
       max-width: none;
+
+      @include minitablet {
+        font-size: 45px;
+        line-height: 58px;
+      }
+      @include mobile {
+        font-size: 35px;
+        line-height: 48px;
+      }
     }
+    @include minidesk {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    background-image: none;
+    min-height: auto;
   }
 }

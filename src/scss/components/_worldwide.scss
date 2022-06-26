@@ -6,4 +6,7 @@
   &__title {
     padding-top: 60px;
   }
+  @include minidesk {
+    display: none;
+  }
 }

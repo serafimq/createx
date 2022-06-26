@@ -22,7 +22,11 @@
     font-weight: 700;
     font-size: 20px;
     line-height: 150%;
-    color: var(--color-ebony)
+    color: var(--color-ebony);
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
   &__descr {
@@ -45,6 +49,10 @@
     border-radius: 4px;
     transition: 0.3s ease-in-out;
     will-change: margin;
+
+    @include minitablet {
+      margin-bottom: 0;
+    }
   }
 
 
